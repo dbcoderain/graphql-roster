@@ -8,9 +8,9 @@ module.exports = {
         .toArray(),
 
     getPeople: (parent, args, { db }) =>
-        db.collection('People')
-          .find()
-          .toArray(),
+      db.collection('People')
+        .find()
+        .toArray(),
 
     People: (parent, args, { db }) =>
       db.collection('People')
