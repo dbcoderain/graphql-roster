@@ -1,0 +1,42 @@
+scalar DateTime
+
+type Squads {
+    _id: ID!
+    name: String!
+    mission: String!
+    members: [People]
+}
+type People {
+    _id: ID!
+    name: String!
+    office: String!
+    role: JobRole!
+    squads: [Squads]
+}
+
+enum JobRole {
+    DEV
+    PO
+    SR_PO
+    SM
+    QA
+    UX
+    TECHNOLOGIST
+}
+
+input PostPeopleInput {
+    name: String!
+    office: String!
+    role: JobRole = DEV
+    squads: String
+}
+
+type Query {
+    getSquads: [Squads!]!
+    getPeople: [People!]!
+    People(name: String!): People
+}
+
+type Mutation {
+    postPeople(input: PostPeopleInput!): People!
+}
