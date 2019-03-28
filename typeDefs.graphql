@@ -24,11 +24,18 @@ enum JobRole {
     TECHNOLOGIST
 }
 
+enum Location {
+    BELFAST
+    LONDON
+    PARIS
+    NEW_YORK
+}
+
 input PostPeopleInput {
     name: String!
-    office: String!
+    office: Location!
     role: JobRole = DEV
-    squads: String
+    squads: [String]
 }
 
 type Query {
