@@ -33,7 +33,7 @@ query {
   }
 
   getSquads {
-    _id,
+    _id
     name
     mission
     members {
