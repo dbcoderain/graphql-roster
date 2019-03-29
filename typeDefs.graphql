@@ -6,22 +6,20 @@ type Squads {
     mission: String!
     members: [People]
 }
+
 type People {
     _id: ID!
     name: String!
     office: String!
-    role: JobRole!
+    jobRole: JobRole!
     squads: [Squads]
 }
 
-enum JobRole {
-    DEV
-    PO
-    SR_PO
-    SM
-    QA
-    UX
-    TECHNOLOGIST
+type JobRole {
+    _id: ID!
+    name: String!
+    order: Int
+    members: [People]
 }
 
 enum Location {
@@ -34,13 +32,14 @@ enum Location {
 input PostPeopleInput {
     name: String!
     office: Location!
-    role: JobRole = DEV
+    jobRole: String!
     squads: [String]
 }
 
 type Query {
     getSquads: [Squads!]!
     getPeople: [People!]!
+    getJobRoles: [JobRole!]!
     People(name: String!): People
 }
 

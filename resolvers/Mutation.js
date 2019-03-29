@@ -10,6 +10,7 @@ module.exports = {
 
     const newPerson = {
       ...args.input,
+      jobRole: ObjectID(args.input.jobRole),
       squads: squadIDs
     }
 

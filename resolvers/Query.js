@@ -12,6 +12,11 @@ module.exports = {
         .find()
         .toArray(),
 
+    getJobRoles: (parent, args, { db }) =>
+      db.collection('JobRole')
+        .find()
+        .toArray(),
+
     People: (parent, args, { db }) =>
       db.collection('People')
         .findOne({ name: args.name })
