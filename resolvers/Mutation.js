@@ -24,6 +24,19 @@ module.exports = {
 
     return newPerson
 
+  },
+
+  async postSquad(parent, args, { db }) {
+
+    const newSquad = {
+      ...args.input
+    }
+
+    const { insertedIds } = await db.collection('Squads').insert(newSquad)
+    newSquad._id = insertedIds[0]
+
+    return newSquad
+
   }
 
 }

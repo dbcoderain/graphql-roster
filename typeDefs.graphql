@@ -36,6 +36,12 @@ input PostPeopleInput {
     squads: [String]
 }
 
+
+input PostSquadInput {
+    name: String!
+    mission: String!
+}
+
 type Query {
     getSquads: [Squads!]!
     getPeople: [People!]!
@@ -45,4 +51,5 @@ type Query {
 
 type Mutation {
     postPeople(input: PostPeopleInput!): People!
+    postSquad(input: PostSquadInput!): Squads!
 }
