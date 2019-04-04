@@ -47,6 +47,7 @@ type Query {
     getPeople: [People!]!
     getJobRoles: [JobRole!]!
     People(name: String!): People
+    Squads(name: String!): Squads
 }
 
 type Mutation {

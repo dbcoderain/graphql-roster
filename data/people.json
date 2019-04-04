@@ -1,0 +1,17 @@
+[{
+    "name": "anne",
+    "office": "LIT",
+    "jobRole": "DEV",
+    "squads": "a,b,c"
+}, {
+    "name": "bill",
+    "mission": "LIT",
+    "jobRole": "DEV",
+    "squads": "b,c"
+
+}, {
+    "name": "charlie",
+    "mission": "DOVER",
+    "jobRole": "PO",
+    "squads": "c"
+}]
