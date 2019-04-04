@@ -1,0 +1,22 @@
+[{
+    "name": "Anne Appleseed",
+    "office": "BELFAST",
+    "jobRole": "DEV",
+    "squads": "alpha,beta,charlie"
+}, {
+    "name": "Bill Baggins",
+    "mission": "BELFAST",
+    "jobRole": "DEV",
+    "squads": "beta,charlie"
+
+}, {
+    "name": "Cecilia Cidre",
+    "mission": "PARIS",
+    "jobRole": "PO",
+    "squads": "charlie"
+}, {
+    "name": "Dan Diamond",
+    "mission": "LONDON",
+    "jobRole": "PO",
+    "squads": "delta"
+}]

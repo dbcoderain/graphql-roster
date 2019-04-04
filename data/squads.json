@@ -1,0 +1,13 @@
+[{
+    "name": "alpha",
+    "mission": "marketing"
+}, {
+    "name": "beta",
+    "mission": "sales"
+}, {
+    "name": "charlie",
+    "mission": "finance"
+}, {
+    "name": "delta",
+    "mission": "sales"
+}]

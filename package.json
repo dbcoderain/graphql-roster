@@ -6,7 +6,8 @@
   "author": "Moon Highway <info@moonhighway.com>",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon -e js,json,graphql"
+    "start": "nodemon -e js,json,graphql",
+    "load-data": "node index --loadData"
   },
   "dependencies": {
     "apollo-server-express": "2.0.0",

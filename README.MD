@@ -6,7 +6,9 @@ GraphQL API for Roster Data
 ```
 DB_HOST=<YOUR_MONGODB_HOST>
 ```
-3. Run `yarn start` and open your browser to `http://localhost:4000/playground`
+3. (Optional) Run `yarn load-data` if you wish to pre-load the mongodb with some test Squads, People, and Job Roles (Important: this will delete all mongo documents before inserting)
+
+4. Run `yarn start` and open your browser to `http://localhost:4000/playground`
 
 
 ### Example Requests

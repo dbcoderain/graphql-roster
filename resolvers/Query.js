@@ -19,6 +19,10 @@ module.exports = {
 
     People: (parent, args, { db }) =>
       db.collection('People')
+        .findOne({ name: args.name }),
+
+    Squads: (parent, args, { db }) =>
+      db.collection('Squads')
         .findOne({ name: args.name })
 
 }
