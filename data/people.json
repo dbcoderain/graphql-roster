@@ -1,17 +1,22 @@
 [{
-    "name": "anne",
-    "office": "LIT",
+    "name": "Anne Appleseed",
+    "office": "BELFAST",
     "jobRole": "DEV",
-    "squads": "a,b,c"
+    "squads": "alpha,beta,charlie"
 }, {
-    "name": "bill",
-    "mission": "LIT",
+    "name": "Bill Baggins",
+    "mission": "BELFAST",
     "jobRole": "DEV",
-    "squads": "b,c"
+    "squads": "beta,charlie"
 
 }, {
-    "name": "charlie",
-    "mission": "DOVER",
+    "name": "Cecilia Cidre",
+    "mission": "PARIS",
     "jobRole": "PO",
-    "squads": "c"
+    "squads": "charlie"
+}, {
+    "name": "Dan Diamond",
+    "mission": "LONDON",
+    "jobRole": "PO",
+    "squads": "delta"
 }]

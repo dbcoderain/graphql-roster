@@ -37,6 +37,19 @@ module.exports = {
 
     return newSquad
 
+  },
+
+  async postJobRole(parent, args, { db }) {
+
+    const newJobRole = {
+      ...args.input
+    }
+
+    const { insertedIds } = await db.collection('JobRole').insert(newJobRole)
+    newJobRole._id = insertedIds[0]
+
+    return newJobRole
+
   }
 
 }
