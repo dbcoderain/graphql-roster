@@ -1,8 +1,13 @@
-const { readFileSync } = require('fs')
+const csv = require('csvtojson')
 const resolvers = require('../resolvers')
-const squadsData = readFileSync('./data/squads.json')
-const peopleData = readFileSync('./data/people.json')
-const jobRoleData = readFileSync('./data/jobRole.json')
+
+const squadsDataPath = './data/squads.csv'
+const peopleDataPath = './data/people.csv'
+const jobRoleDataPath = './data/jobRole.csv'
+
+readLocalCSV = async (filePath) => {
+  return await csv().fromFile(filePath);
+}
 
 module.exports = {
 
@@ -13,9 +18,9 @@ module.exports = {
     db.collection('Squads').deleteMany({});
 
     console.log('************ LOADING DATA **************');
-    const jobRolesJSON = JSON.parse(jobRoleData);
-    const squadsJSON = JSON.parse(squadsData);
-    const peopleJSON = JSON.parse(peopleData);
+    const jobRolesJSON = await readLocalCSV(jobRoleDataPath);
+    const squadsJSON = await readLocalCSV(squadsDataPath);
+    const peopleJSON = await readLocalCSV(peopleDataPath);
 
     console.log('----------- INSERT JOB ROLES -----------');
     for (let i = 0; i < jobRolesJSON.length; i++) {
