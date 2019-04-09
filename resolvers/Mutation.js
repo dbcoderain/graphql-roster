@@ -26,6 +26,30 @@ module.exports = {
 
   },
 
+
+  async updatePeople(parent, args, { db }) {
+
+    const squadIDs = args.input.squads.map(squad => {
+      return ObjectID(squad)
+    });
+
+    delete args.input.squads
+
+    const newPerson = {
+      ...args.input
+    }
+
+    await db.collection('People')
+        .update({ _id: ObjectID(args._id) }, { $set: newPerson,  $push: { squads: squadIDs[0] } })
+
+    for (let i = 0; i < squadIDs.length; i++) {
+      await db.collection('Squads')
+        .update({ _id: ObjectID(squadIDs[i]) }, { $push: { members: ObjectID(args._id) } })
+    }
+    return 1
+
+  },
+
   async postSquad(parent, args, { db }) {
 
     const newSquad = {

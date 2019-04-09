@@ -36,6 +36,13 @@ input PostPeopleInput {
     squads: [String]
 }
 
+input UpdatePeopleInput {
+    name: String
+    office: Location
+    jobRole: String
+    squads: [String]
+}
+
 input PostSquadInput {
     name: String!
     mission: String!
@@ -56,6 +63,7 @@ type Query {
 
 type Mutation {
     postPeople(input: PostPeopleInput!): People!
+    updatePeople(_id: String input: UpdatePeopleInput!): Int
     postSquad(input: PostSquadInput!): Squads!
     postJobRole(input: PostJobRoleInput!): JobRole!
 }
